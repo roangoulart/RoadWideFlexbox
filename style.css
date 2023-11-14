@@ -47,6 +47,8 @@
     height: 30px;
 
     /* flex-grow: 1;
+    O flex-grow é utilizado para declarar que os elementos tem a mesma largura.
+
     flex-shrink: 1;
     flex-basis: 300px; */
     flex: 1 1 300px;
