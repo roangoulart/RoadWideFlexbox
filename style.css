@@ -1,60 +1,28 @@
-.container {
-    background-color: #ccc;
-    height: 500px;
-    display: flex;
+/* RESET */
+* {margin: 0; padding: 0; font-size: 100%; box-sizing: border-box; font-family: "Opens Sans", sans-serif;}
+nav, ul {list-style: none;}
+a {text-decoration: none; cursor: pointer; opacity: 0.9;}
+a:hover {opacity: 1;}
 
-    flex-direction: row;
-    /* O flex-direction tem vários valores, o row é o valor padrão, deixando os arquivos alinhados um após o outro em 
-    uma linha. O column deixa os arquivos em colunas. O row-reverse deixa os arquivos em forma de linha na ordem 
-    inversa, da esquerda pra direita. O column-reverse deixa os arquivos em colunas na ordem inversa, da esquerda pra 
-    direita.
-    */
-
-    flex-wrap: nowrap;
-    /* O wrap permite a quebra de linha entre os elementos. O nowrap não permite a quebra de linha entre os elementos.
-    O wrap-reverse permite a quebra de linha na ordem inversa, da esqueda pra direita.
-    */
-
-    /* flex-flow: row wrap-reverse; */
-    /* O flex-flow é uma forma resumida de escrever o flex-direction e flex-wrap. 
-    */
-
-    justify-content: flex-start;
-    /* Usada para fazer alinhamento horizontal sem alterar a ordem dos elementos. O flex-start alinha os elementos da 
-    esquerda pra direita, esse também é o valor padrão do justify-content. O flex-end alinha os itens da direita para 
-    a esquerda. O center alinha os elementos no centro da linha. O space-between alinha os arquivos com um espaçamento 
-    entre eles. O space-around alinha os elementos com uma espaçamento igual entre os arquivos.
-    */
-
-    align-items: stretch;
-    /* Usado para fazer alinhamento vertical. O stretch é o valor padrão, que alinha os elementos de forma igual.
-    O flex-start alinha os elementos no topo. O flex-end alinha os elementos na parte de baixo, na base do container.
-    O center alinha os elementos no centro do container. O baseline alinha os elementos verticalmente baseado no seu
-    conteúdo.
-    */
-
-    /* align-content: flex-start; */
-    /* Usado para fazer alinhamento vertical quando os itens estiverem com quebra. Usa as mesmas configurações do
-    align-items.
-    */
+/* HEADER */
+header {width: 100%; position: absolute; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background-color: #fff;}
+header img {width: 200px;}
+header nav {display: flex;}
+header li a {color: #191c03;}
+header li {margin: 0 15px;}
+header li:first-child {margin-left: 0;}
+header li:last-child {margin-right: 0;}
+@media (max-width: 700px) {
+    header {flex-direction: column;}
+    header img {margin-bottom: 15px;}
 }
 
-.item {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    margin: 5px;
-    height: 30px;
-
-    /* flex-grow: 1;
-    O flex-grow é utilizado para declarar que os elementos tem a mesma largura.
-
-    flex-shrink: 1;
-    flex-basis: 300px; */
-    flex: 1 1 300px;
+/* HERO */
+.hero {background-image: url(./imgs/hero.jpg); background-size: cover; min-height: 100vh; color: #fff; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;}
+.hero h1 {font-size: 3.2rem; margin-bottom: 15px;}
+.hero h3 {font-size: 2rem; margin-bottom: 15px;}
+.hero .btn{background-color: #fff; border-radius: 4px; color: #191c03; padding: 20px 50px; text-transform: uppercase;}
+@media (max-width: 700px) {
+    .hero h1 {font-size: 2.5rem;}
+    .hero h3 {font-size: 1.5rem;}
 }
-
-.article-01 {flex-shrink: 3;}
-.article-02 {}
-.article-03 {}
-.article-04 {}
